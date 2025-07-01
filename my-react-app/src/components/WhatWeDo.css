@@ -1,0 +1,146 @@
+.what {
+  width: 100%;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.what-container {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.line {
+  width: 0;
+  height: 3px;
+  background: #FFD600;
+  animation: grow 1s ease forwards;
+}
+
+@keyframes grow {
+  to {
+    width: 220px;
+  }
+}
+
+.title-line h2 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.what-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.what-header p {
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.card-number {
+  font-weight: bold;
+  font-size: 28px;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.card-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.card-image {
+  position: absolute!important;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/sample-work.jpg') center/cover no-repeat;
+  transition: left 0.3s ease;
+  z-index: 0!important;
+}
+
+.card:hover .card-image {
+  left: 0;
+}
+
+.card:hover {
+  color: white;
+}
+
+.card:hover .card-number {
+  color: #FFD600;
+}
+
+.card:hover .card-text {
+  color: white;
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.circle-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background: #FFD600;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.arrow {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.circle-btn:hover .arrow {
+  transform: rotate(0deg);
+}
+
+@media (max-width: 1024px) {
+  .title-line h2 {
+    font-size: 36px;
+  }
+  .what-header {
+    flex-direction: column;
+  }
+}
