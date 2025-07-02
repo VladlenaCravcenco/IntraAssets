@@ -8,7 +8,7 @@ import WhatWeDo from './components/WhatWeDo';
 import EnergySection from './components/EnergySection';
 import FooterMap from './components/FooterMap';
 import Footer from './components/Footer';
-import CopyRight from './components/CopyRight';
+import CopyFooter from './components/CopyFooter';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       <EnergySection />
       <FooterMap />
       <Footer />
-      <CopyRight />
+      <CopyFooter />
     </>
   );
 }

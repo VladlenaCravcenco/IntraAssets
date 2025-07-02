@@ -1,7 +1,7 @@
 import React from 'react';
 import './Copy.css';
 
-export default function CopyRight() {
+export default function CopyFooter() {
   return (
     <section className='Copy'>
         <div className="footer-container">
