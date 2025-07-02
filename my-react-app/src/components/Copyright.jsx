@@ -1,7 +1,7 @@
 import React from 'react';
-import './Copyright.css';
+import './Copy.css';
 
-export default function Copyright() {
+export default function CopyRight() {
   return (
     <section className='Copy'>
         <div className="footer-container">
