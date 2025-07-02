@@ -1,0 +1,19 @@
+.Copy{
+    width: 100%;
+    height: 85px;
+      border-top: 1px solid #666666;
+      background-color: black;
+      color: #666666;
+      padding: 0!important;
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: underline;
+
+}
