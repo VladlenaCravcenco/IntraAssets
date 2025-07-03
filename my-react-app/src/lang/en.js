@@ -12,6 +12,7 @@ export default {
     whowep1: "Intra Assets SRL is a licensed electricity supplier operating exclusively in the wholesale energy market.",
     whowep2: "With an ANRE license obtained on December 3, 2020, we trade electricity between suppliers, traders, and exchanges in Moldova, Romania, and Ukraine.",
     whowep3: "We do not supply end consumers — our role is to enable and optimize cross-border flows of electricity between market participants.",
+    Teamtitle:"Management Team",
     wherewetitle: "Where We Operate",
     wherewesubtitle: "Regional Presence",
     wherewesubdescr: "Intra Assets facilitates efficient and transparent cross-border electricity flows.",

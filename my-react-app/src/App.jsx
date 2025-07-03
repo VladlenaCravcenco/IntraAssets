@@ -9,6 +9,7 @@ import EnergySection from './components/EnergySection';
 import FooterMap from './components/FooterMap';
 import Footer from './components/Footer';
 import CopyFooter from './components/CopyFooter';
+import Team from './components/Team';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Hero />
       <WhoWeAre />
+        <Team />
       <WhereWeOperate />
       <WhatWeDo />
       <EnergySection />

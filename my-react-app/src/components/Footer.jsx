@@ -21,6 +21,22 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
+          <h3>{t.Teamtitle}</h3>
+          <div className="team-member">
+        <p><strong>Chiril Lucinschi</strong> – Administrator</p>
+        <a href="mailto:intraassets@gmail.com">intraassets@gmail.com</a>
+      </div>
+      <div className="team-member">
+        <p><strong>Diana Chistrea</strong> – Commercial Director</p>
+        <a href="mailto:intraassets@gmail.com">intraassets@gmail.com</a>
+      </div>
+      <div className="team-member">
+        <p><strong>Eduard Scutaru</strong> – Jurist</p>
+        <a href="mailto:e.scutaru@bulr.com">e.scutaru@bulr.com</a>
+      </div>
+        </div>
+
+        <div className="footer-col">
           <h3>{t.contacts}</h3>
           <p> <a href="https://maps.google.com/?q=str.București+76,Chișinău" target="_blank" rel="noopener noreferrer"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.3691 8.99953V14.9995C22.3691 17.4995 21.8691 19.2495 20.7491 20.3795L14.3691 13.9995L22.0992 6.26953C22.2792 7.05953 22.3691 7.95953 22.3691 8.99953Z" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

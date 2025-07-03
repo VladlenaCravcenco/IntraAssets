@@ -13,7 +13,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  align-items: center;
+  align-items: start;
 }
 .footer-col{
     display: flex;
@@ -33,10 +33,12 @@
 
 .footer-col a {
   color: white;
+  
 
 }
 p a{
   text-align: center;
+  
 }
 
 .footer-line {
