@@ -70,14 +70,18 @@ p a{
 }
 
 @media (max-width: 768px) {
+  .footer{
+    height: max-content;
+    padding: 50px 5%;
+  }
   .footer-container {
     flex-direction: column;
     gap: 30px;
     height: max-content;
   }
   .footer-col{
-    text-align: center;
-    align-items: center;
+    text-align: start;
+    align-items: start;
     
   }
 
