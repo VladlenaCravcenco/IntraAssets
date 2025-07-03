@@ -90,22 +90,44 @@ radial-gradient(circle at center, #BF9901, #FFD600);
 }
 
 @media (max-width: 1024px) {
-  .hero-title {
-    font-size: 72px;
-    text-align: start;
+  .hero{
+    height: max-content;
   }
+  .hero-title {
+    font-size: 60px;
+    text-align: start;
+    width: 100%;
+    font-weight: 700;
+}
+    
+  
 
   .hero-container {
     width: 90%;
+    margin: 100px auto;
   }
 
   .hero-description {
     width: 100%;
+    font-size: 16px;
   }
+
+  .yellow-btn{
+    font-size: 16px;
+
+  }
+
+  .circle-btn{
+    width: 85px;
+    height: 85px;
+    top: 25px;
+  }
+
 
   .hero-descr-container {
     flex-wrap: wrap;
-    width: 90%;
-    gap: 20px;
+    width: 100%;
+    gap: 25px;
+    justify-content: end;
   }
 }

@@ -128,6 +128,11 @@ radial-gradient(circle at center, #BF9901, #FFD600);
 }
 
 @media (max-width: 768px) {
+
+  .energy{
+    height: max-content;
+  }
+
   .energy-form-container {
     flex-direction: column;
   }
@@ -143,5 +148,14 @@ radial-gradient(circle at center, #BF9901, #FFD600);
   .energy-bg {
     width: 300px;
     opacity: 0.2;
+  }
+
+  .title-line{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .title-line h2 {
+    font-size: 28px;
   }
 }

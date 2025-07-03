@@ -94,7 +94,7 @@ position: relative;
   font-size: 24px;
   color: black;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .language-switcher button {
@@ -103,16 +103,22 @@ position: relative;
   cursor: pointer;
   font-weight: 300;
   color: inherit;
-  opacity: 0.6;
+  opacity: 0.5;
+  font-size: 16px;
 }
 
 .language-switcher .active {
   font-weight: 700;
   opacity: 1;
+  color: #FFD600;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
+
+  .header{
+    height: 80px;
+  }
   .nav {
     display: none;
   }
