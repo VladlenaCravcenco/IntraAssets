@@ -24,7 +24,6 @@
   line-height: 1;
   font-weight: 400;
   text-align: center;
-  width: 110%;
 }
 .hero-descr-container{
   display: flex;
@@ -47,7 +46,7 @@ display: inline-block;
 padding: 16px 30px;
 background: radial-gradient(circle at center, #BF9901, #FFD600);
 border-radius: 12px;
-color: black;
+color: black!important;
 font-weight: 400;
 font-size: 20px;
 cursor: pointer;
@@ -60,15 +59,17 @@ radial-gradient(circle at center, #BF9901, #FFD600);
 }
 
 .circle-btn {
+  font-size: 60px;
+text-align: center;
 width: 120px;
 height: 120px;
 border-radius: 100px;
-font-size: 32px;
+
 flex-shrink: 0;
 position: relative;
 display: inline-block;
 background: radial-gradient(circle at center, #BF9901, #FFD600);
-color: black;
+color: black!important;
 font-weight: 400;
 cursor: pointer;
 transition: all 0.3s ease;
@@ -96,7 +97,6 @@ radial-gradient(circle at center, #BF9901, #FFD600);
   .hero-title {
     font-size: 60px;
     text-align: start;
-    width: 100%;
     font-weight: 700;
 }
     
@@ -120,7 +120,8 @@ radial-gradient(circle at center, #BF9901, #FFD600);
   .circle-btn{
     width: 85px;
     height: 85px;
-    top: 25px;
+    font-size: 45px;
+  
   }
 
 

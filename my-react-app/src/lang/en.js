@@ -3,7 +3,7 @@ export default {
   activity: "Activity",
   services: "Services",
   contacts: "Contacts",
-    herotitle: "Intra Assets – Light Without Borders",
+    herotitle: "Light Without Borders",
     herosubtitle: "Regional electricity trading company, active in wholesale energy markets across Moldova, Romania, and Ukraine.",
     herorequest: "Request Partnership",
     herocontact: "Get in Touch",

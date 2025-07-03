@@ -3,7 +3,7 @@ export default {
   activity: "Activitate",
   services: "Servicii",
   contacts: "Contacte",
-   herotitle: "Intra Assets – Lumină Fără Frontiere",
+   herotitle: "Lumină Fără Frontiere",
     herosubtitle: "Trader regional de energie electrică, activ pe piețele angro din Moldova, România și Ucraina.",
     herorequest: "Solicită Parteneriat",
     herocontact: "Contactează-ne",
