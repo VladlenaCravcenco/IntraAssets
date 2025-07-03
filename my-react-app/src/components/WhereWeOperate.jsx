@@ -1,14 +1,28 @@
 import React, { useEffect, useState } from "react";
 import "./WhereWeOperate.css";
 import { useLanguage } from "../context/LanguageContext";
-import { client, urlFor } from "../sanityClient";
+import { client } from "../sanityClient";
 
 export default function WhereWeOperate() {
   const { lang } = useLanguage();
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    client.fetch(`*[_type == "whereWeOperate"][0]`).then(setData);
+    client
+      .fetch(`*[_type == "whereWeOperate"][0]{
+        title,
+        subtitle,
+        description,
+        buttonText,
+        mapImage,
+        countries,
+        licenseFile {
+          asset->{
+            url
+          }
+        }
+      }`)
+      .then(setData);
   }, []);
 
   if (!data) return null;
@@ -24,7 +38,10 @@ export default function WhereWeOperate() {
         <div className="where-content">
           <div className="map-side">
             {data.mapImage && (
-              <img src={urlFor(data.mapImage).url()} alt="electric map" />
+              <img
+                src={data.mapImage.asset?.url || ""}
+                alt="electric map"
+              />
             )}
             <div className="circle-btn-wrapper">
               <a href="#contacts" className="circle-btn">
@@ -48,13 +65,13 @@ export default function WhereWeOperate() {
                 </div>
               ))}
 
-              {data.licenseFile && (
+              {data.licenseFile?.asset?.url && (
                 <a
-                  href={urlFor(data.licenseFile).url()}
+                  href={data.licenseFile.asset.url}
                   download
                   className="yellow-btn"
                 >
-                  {data.buttonText?.[lang] || "Download"}
+                  {data.buttonText?.[lang] || "Download License"}
                 </a>
               )}
             </div>
