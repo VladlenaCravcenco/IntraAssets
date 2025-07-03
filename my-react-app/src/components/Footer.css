@@ -19,6 +19,7 @@
     display: flex;
     gap: 10px;
     flex-direction: column;
+    width: 300px;
 }
 .footer-col h2 {
   font-size: 40px;
@@ -32,7 +33,6 @@
 
 .footer-col a {
   color: white;
-  text-decoration: underline;
 
 }
 
@@ -68,6 +68,12 @@
   .footer-container {
     flex-direction: column;
     gap: 30px;
+    height: max-content;
+  }
+  .footer-col{
+    text-align: center;
+    align-items: center;
+    
   }
 
   .footer-col h2 {

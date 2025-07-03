@@ -1,14 +1,18 @@
 import React from 'react';
 import './WhereWeOperate.css';
+import { useLanguage } from '../context/LanguageContext';
 import sampleMap from '../assets/sample-map.png';
 
 export default function WhereWeOperate() {
+    const { t, lang, setLang } = useLanguage();
+  
   return (
-    <section className="where">
+    <section className="where" id='activity'>
       <div className="where-container">
         <div className="title-line">
+          
+          <h2>{t.wherewetitle}</h2>
           <div className="line" />
-          <h2>Where we operate</h2>
         </div>
 
         <div className="where-content">
@@ -22,25 +26,25 @@ export default function WhereWeOperate() {
           </div>
 
           <div className="cards-side">
-            <div className="card">
-              <h3>Regional Presence</h3>
-              <p>Intra Assets facilitates efficient and transparent cross-border electricity flows.</p>
+            <div className="card-operate">
+              <h3>{t.wherewesubtitle}</h3>
+              <p>{t.wherewesubdescription}</p>
             </div>
-            <div className="card">
-              <h3>Country market activity:</h3>
+            <div className="card-operate">
+              <h3>{t.wherewecountry}</h3>
               <div className="entry">
-                <span>🇲🇩 Moldova</span>
-                <p>Licensed wholesale trader (ANRE)</p>
+                <span>{t.whereweMD}</span>
+                <p>{t.whereweMDdescr}</p>
               </div>
               <div className="entry">
-                <span>🇷🇴 Romania</span>
-                <p>Active on OPCOM power exchange</p>
+                <span>{t.whereweRO}</span>
+                <p>{t.whereweROdescr}</p>
               </div>
               <div className="entry">
-                <span>🇺🇦 Ukraine</span>
-                <p>Trading partnerships with suppliers</p>
+                <span>{t.whereweUK}</span>
+                <p>{t.whereweUKdescr}</p>
               </div>
-              <button className="yellow-btn">Download License PDF</button>
+              <a href='/files/Reperfectatã la data de - 25.02.2025.pdf' download className="yellow-btn">{t.wherewebutton}</a>
             </div>
           </div>
         </div>

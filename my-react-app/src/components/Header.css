@@ -66,6 +66,8 @@
   background: #FFD600;
   border-radius: 4px;
   padding: 4px 10px;
+  z-index: 1000;
+position: relative;
 }
 
 .mobile-menu {
@@ -93,6 +95,20 @@
   color: black;
   text-decoration: none;
   font-weight: 600;
+}
+
+.language-switcher button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 300;
+  color: inherit;
+  opacity: 0.6;
+}
+
+.language-switcher .active {
+  font-weight: 700;
+  opacity: 1;
 }
 
 /* Responsive */

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
+import { useLanguage } from '../context/LanguageContext';
+
+
 
 function Header() {
+    const { t, lang, setLang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -17,13 +21,16 @@ function Header() {
         <div className="logo">Intra <span>Assets</span></div>
 
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-          <a href="#about">About us</a>
-          <a href="#activity">Activity</a>
-          <a href="#services">Services</a>
-          <a href="#contacts">Contacts</a>
+          <a href="#about">{t.about}</a>
+        <a href="#activity">{t.activity}</a>
+        <a href="#services">{t.services}</a>
+        <a href="#contacts">{t.contacts}</a>
         </nav>
 
-        <div className="language-switcher">ro / en</div>
+        <div className="language-switcher">
+          <button onClick={() => setLang('ro')}>ro</button> / 
+        <button onClick={() => setLang('en')}>en</button>
+        </div>
 
         <button className="burger" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? (
@@ -37,10 +44,10 @@ function Header() {
       {menuOpen && (
         <div className="mobile-menu">
           <div className="mobile-nav">
-            <a href="#about" onClick={() => setMenuOpen(false)}>About us</a>
-            <a href="#activity" onClick={() => setMenuOpen(false)}>Activity</a>
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-            <a href="#contacts" onClick={() => setMenuOpen(false)}>Contacts</a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>{t.about}</a>
+            <a href="#activity" onClick={() => setMenuOpen(false)}>{t.activity}</a>
+            <a href="#services" onClick={() => setMenuOpen(false)}>{t.services}</a>
+            <a href="#contacts" onClick={() => setMenuOpen(false)}>{t.contacts}</a>
           </div>
         </div>
       )}

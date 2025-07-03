@@ -1,15 +1,17 @@
 import React from 'react';
 import './WhoWeAre.css';
+import { useLanguage } from '../context/LanguageContext';
 import sample1 from '../assets/sample1.png';
 import sample2 from '../assets/sample2.png';
 
 export default function WhoWeAre() {
+  const { t, lang, setLang } = useLanguage();
   return (
-    <section className="who">
+    <section className="who" id='about'>
       <div className="who-container">
         <div className="title-line">
           <div className="line" />
-          <h2>Who we are</h2>
+          <h2>{t.whowetitle}</h2>
         </div>
 
         <div className="who-grid">
@@ -18,10 +20,10 @@ export default function WhoWeAre() {
           </div>
 
           <div className="who-text">
-            <h3>Experts In Regional Electricity Trading</h3>
-            <p>Intra Assets SRL is a licensed electricity supplier operating exclusively in the wholesale energy market.</p>
-            <p>We trade electricity between suppliers, traders, and exchanges in Moldova, Romania, and Ukraine.</p>
-            <p>We do not supply end-consumers – our role is to enable and optimize cross-border flows of electricity between market participants.</p>
+            <h3>{t.whowesubtitle}</h3>
+            <p>{t.whowep1}</p>
+            <p>{t.whowep2}</p>
+            <p>{t.whowep3}</p>
           </div>
 
           <div className="who-arrow">

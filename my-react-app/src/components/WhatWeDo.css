@@ -72,14 +72,14 @@
 
 .card-number {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 60px;
   color: black;
   transition: color 0.3s ease;
 }
 
 .card-text {
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 22px;
   color: black;
   transition: color 0.3s ease;
 }
@@ -93,6 +93,7 @@
   background: url('../assets/sample-work.jpg') center/cover no-repeat;
   transition: left 0.3s ease;
   z-index: 0!important;
+  border-radius: 14px;
 }
 
 .card:hover .card-image {
@@ -117,23 +118,32 @@
 }
 
 .circle-btn {
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
-  background: #FFD600;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  flex-shrink: 0;
+width: 120px;
+height: 120px;
+border-radius: 100px;
+font-size: 32px;
+flex-shrink: 0;
+position: relative;
+display: inline-block;
+background: radial-gradient(circle at center, #BF9901, #FFD600);
+color: black;
+font-weight: 400;
+cursor: pointer;
+transition: all 0.3s ease;
+background-clip: padding-box, border-box;
+background-origin: border-box;
+border: 5px solid transparent;
+background-image: linear-gradient(#FFD600, #FFD600),  /* фон кнопки */
+radial-gradient(circle at center, #BF9901, #FFD600);
 }
 
 .arrow {
-  transform: rotate(45deg);
+  transform: rotate(0deg);
   transition: transform 0.3s ease;
 }
 
 .circle-btn:hover .arrow {
-  transform: rotate(0deg);
+  transform: rotate(45deg);
 }
 
 @media (max-width: 1024px) {

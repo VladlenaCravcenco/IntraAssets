@@ -57,7 +57,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .energy-form {
@@ -99,18 +99,26 @@
 }
 
 .energy-form button {
-  background: #FFD600;
-  color: black;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
+ position: relative;
+ display: inline-block;
+padding: 16px 30px;
+background: radial-gradient(circle at center, #BF9901, #FFD600);
+border-radius: 12px;
+color: black;
+font-weight: 400;
+font-size: 20px;
+cursor: pointer;
+transition: all 0.3s ease;
+background-clip: padding-box, border-box;
+background-origin: border-box;
+border: 4px solid transparent;
+background-image: linear-gradient(#FFD600, #FFD600),  /* фон кнопки */
+radial-gradient(circle at center, #BF9901, #FFD600);
 }
 
 .energy-image {
   flex: 1;
-  max-width: 500px;
+
 }
 
 .energy-image img {

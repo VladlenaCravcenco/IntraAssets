@@ -1,17 +1,20 @@
 import React from 'react';
 import './Hero.css';
+import { useLanguage } from '../context/LanguageContext';
 
-export default function Hero() {
+function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="hero">
       <div className="hero-container">
-        <h1 className="hero-title">Intra Assets – Light Without Borders</h1>
-        <p className="hero-description">
-          Regional electricity trading company, active in wholesale energy markets across Moldova, Romania, and Ukraine.
-        </p>
-        <div className="hero-buttons">
-          <button className="yellow-btn">Request Partnership</button>
-          <button className="yellow-btn">Get in Touch</button>
+        <h1 className="hero-title">{t.herotitle}</h1>
+        <div className='hero-descr-container'>
+          <p className="hero-description">
+            {t.herosubtitle}
+          </p>
+          <button className="yellow-btn">{t.herorequest}</button>
+          <button className="yellow-btn">{t.herocontact}</button>
           <button className="circle-btn">
             <span className="arrow">↗</span>
           </button>
@@ -20,3 +23,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default Hero;
