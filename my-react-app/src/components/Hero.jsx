@@ -19,8 +19,8 @@ function Hero() {
         <h1 className="hero-title">{data.title[lang]}</h1>
         <div className='hero-descr-container'>
           <p className="hero-description">{data.subtitle[lang]}</p>
-          <a href='#contacts' className="yellow-btn">{data.button1[lang]}</a>
-          <a href='#contacts' className="yellow-btn">{data.button2[lang]}</a>
+          <a href='#contacts' className="yellow-btn">{data.cta1[lang]}</a>
+          <a href='#contacts' className="yellow-btn">{data.cta2[lang]}</a>
           <a href='#contacts' className="circle-btn">
             <span className="arrow">↗</span>
           </a>
