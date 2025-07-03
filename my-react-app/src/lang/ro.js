@@ -12,7 +12,7 @@ export default {
     whowep1: "Intra Assets SRL este o companie licențiată în calitate de furnizor de energie electrică, specializată în tranzacționarea pe piața angro.",
     whowep2: "Licența a fost obținută în 2020 (3 decembrie), iar activitatea companiei se concentrează pe colaborarea cu furnizori și traderi din Moldova, România și Ucraina – fără a avea consumatori finali.",
     whowep3: "Prin rețelele noastre de parteneri și accesul la burse energetice, livrăm energie acolo unde este nevoie – rapid, sigur și eficient.",
-    Teamtitle:" Echipa Managerială",
+    Teamtitle:"Echipa Managerială",
     wherewetitle: "Unde Activăm",
     wherewesubtitle: "Prezență regională",
     wherewesubdescr: "Facilităm schimburi transfrontaliere rapide și transparente de energie electrică între furnizori.",
