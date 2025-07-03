@@ -149,6 +149,9 @@ radial-gradient(circle at center, #BF9901, #FFD600);
     width: 300px;
     opacity: 0.2;
   }
+  .energy-text{
+    font-size: 18px;
+  }
 
   .title-line{
     flex-direction: column;
