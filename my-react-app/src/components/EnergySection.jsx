@@ -19,7 +19,7 @@ export default function EnergySection() {
           </p>
           <div className="energy-links">
             <a href="#">LinkedIn</a>
-            <a href="#">{t.energylicense}</a>
+            <a href='/files/Reperfectatã la data de - 25.02.2025.pdf' download >{t.energylicense}</a>
           </div>
         </div>
         <div className="energy-form-container">
