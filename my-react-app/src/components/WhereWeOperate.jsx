@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import './WhereWeOperate.css';
-import { useLanguage } from '../context/LanguageContext';
-import { client, urlFor } from '../sanityClient';
+import React, { useEffect, useState } from "react";
+import "./WhereWeOperate.css";
+import { useLanguage } from "../context/LanguageContext";
+import { client, urlFor } from "../sanityClient";
 
 export default function WhereWeOperate() {
   const { lang } = useLanguage();
@@ -48,13 +48,13 @@ export default function WhereWeOperate() {
                 </div>
               ))}
 
-              {data.licenseFile?.asset?.url && (
+              {data.licenseFile && (
                 <a
-                  href={data.licenseFile.asset.url}
+                  href={urlFor(data.licenseFile).url()}
                   download
                   className="yellow-btn"
                 >
-                  {data.buttonText?.[lang] || 'Download'}
+                  {data.buttonText?.[lang] || "Download"}
                 </a>
               )}
             </div>
