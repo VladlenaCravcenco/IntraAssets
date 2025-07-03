@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./WhereWeOperate.css";
 import { useLanguage } from "../context/LanguageContext";
 import { client } from "../sanityClient";
+import sampleMap from "../assets/sample-map.png"; // ← локальная картинка
 
 export default function WhereWeOperate() {
   const { lang } = useLanguage();
@@ -14,7 +15,6 @@ export default function WhereWeOperate() {
         subtitle,
         description,
         buttonText,
-        mapImage,
         countries,
         licenseFile {
           asset->{
@@ -37,12 +37,7 @@ export default function WhereWeOperate() {
 
         <div className="where-content">
           <div className="map-side">
-            {data.mapImage && (
-              <img
-                src={data.mapImage.asset?.url || ""}
-                alt="electric map"
-              />
-            )}
+            <img src={sampleMap} alt="electric map" /> {/* локальное изображение */}
             <div className="circle-btn-wrapper">
               <a href="#contacts" className="circle-btn">
                 <span className="arrow">↗</span>
