@@ -131,6 +131,8 @@ radial-gradient(circle at center, #BF9901, #FFD600);
 
   .energy{
     height: max-content;
+    padding-bottom: 40px;
+    padding-top: 0;
   }
 
   .energy-form-container {
@@ -149,6 +151,8 @@ radial-gradient(circle at center, #BF9901, #FFD600);
     width: 300px;
     opacity: 0.2;
   }
+
+  
   .energy-text{
     font-size: 18px;
   }

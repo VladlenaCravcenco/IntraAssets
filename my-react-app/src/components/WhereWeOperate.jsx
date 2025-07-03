@@ -36,15 +36,27 @@ export default function WhereWeOperate() {
             <div className="card-operate">
               <h3>{t.wherewecountry}</h3>
               <div className="entry">
-                <span>{t.whereweMD}</span>
+                <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0654 15.7705C12.5232 18.2283 16.508 18.2283 18.9658 15.7705C21.4236 13.3127 21.4236 9.32789 18.9658 6.87012C16.508 4.41234 12.5232 4.41234 10.0654 6.87012C7.60765 9.32789 7.60765 13.3127 10.0654 15.7705Z" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.5156 26.611V20.252" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ {t.whereweMD}</span>
                 <p>{t.whereweMDdescr}</p>
               </div>
               <div className="entry">
-                <span>{t.whereweRO}</span>
+                <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0654 15.7705C12.5232 18.2283 16.508 18.2283 18.9658 15.7705C21.4236 13.3127 21.4236 9.32789 18.9658 6.87012C16.508 4.41234 12.5232 4.41234 10.0654 6.87012C7.60765 9.32789 7.60765 13.3127 10.0654 15.7705Z" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.5156 26.611V20.252" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ {t.whereweRO}</span>
                 <p>{t.whereweROdescr}</p>
               </div>
               <div className="entry">
-                <span>{t.whereweUK}</span>
+                <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0654 15.7705C12.5232 18.2283 16.508 18.2283 18.9658 15.7705C21.4236 13.3127 21.4236 9.32789 18.9658 6.87012C16.508 4.41234 12.5232 4.41234 10.0654 6.87012C7.60765 9.32789 7.60765 13.3127 10.0654 15.7705Z" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.5156 26.611V20.252" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ {t.whereweUK}</span>
                 <p>{t.whereweUKdescr}</p>
               </div>
               <a href='/files/Reperfectatã la data de - 25.02.2025.pdf' download className="yellow-btn">{t.wherewebutton}</a>

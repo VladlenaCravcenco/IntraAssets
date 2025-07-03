@@ -15,7 +15,7 @@ export default {
     wherewetitle: "Where We Operate",
     wherewesubtitle: "Regional Presence",
     wherewesubdescr: "Intra Assets facilitates efficient and transparent cross-border electricity flows.",
-    wherewecountry: "Country Market Activity",
+    wherewecountry: "Country Market Activity:",
     whereweMD: "Moldova",
     whereweMDdescr: "Licensed wholesale trader (ANRE)",
     whereweRO: "Romania",
