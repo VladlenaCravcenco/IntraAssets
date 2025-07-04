@@ -1,20 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
-const FadeInOnView = ({
-  children,
-  className = "",
-  delay = 0,
-  x = 0,
-  y = 30,
-  duration = 0.8,
-}) => {
+const FadeInOnView = ({ children, delay = 0, x = 0, y = 30, duration = 0.8 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.5, // 50% элемента в зоне видимости
+    threshold: 0.5,
   });
 
   useEffect(() => {
@@ -26,12 +18,11 @@ const FadeInOnView = ({
         transition: { duration, delay },
       });
     }
-  }, [controls, inView, delay, duration]);
+  }, [inView, controls, delay, duration]);
 
   return (
     <motion.div
       ref={ref}
-      className={className}
       initial={{ opacity: 0, x, y }}
       animate={controls}
     >
