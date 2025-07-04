@@ -18,13 +18,13 @@ export default function EnergySection() {
 
   useEffect(() => {
     client
-      .fetch(`*[_type == "energySection"][0]{
-        title1, title2, description,
-        formTitle, submitText, licenseText,
-        linkedinUrl, formPlaceholders,
-        backgroundImage{ asset->{url} },
-        formRecipientEmail
-      }`)
+  .fetch(`*[_type == "energySection"][0]{
+    title1, title2, description,
+    formTitle, submitText, licenseText,
+    linkedinUrl, formPlaceholders,
+    image { asset->{url} },
+    formRecipientEmail
+  }`)
       .then(setData);
   }, []);
 
@@ -37,8 +37,8 @@ export default function EnergySection() {
     e.preventDefault();
 
     emailjs.send(
-      'your_service_id',
-      'your_template_id',
+      'service_e2wwqcr',
+      'template_4l0bbqn',
       {
         to_email: data.formRecipientEmail,
         from_name: form.name,
@@ -46,7 +46,7 @@ export default function EnergySection() {
         phone: form.phone,
         message: form.message,
       },
-      'your_public_key'
+      'flm356T35V3ZqIHBS'
     )
     .then(() => {
       alert('Message sent!');
