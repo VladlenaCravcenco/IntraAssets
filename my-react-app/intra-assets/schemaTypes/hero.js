@@ -1,3 +1,5 @@
+import seo from './seo';
+
 export default {
   name: 'hero',
   title: 'Hero Section',
@@ -45,5 +47,11 @@ export default {
       type: 'image',
       options: { hotspot: true },
     },
+    {
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo'
+    },
+
   ],
 }

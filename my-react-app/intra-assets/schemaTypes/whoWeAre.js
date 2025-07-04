@@ -1,4 +1,6 @@
-// schema/whoWeAre.js
+
+import seo from './seo';
+
 export default {
   name: 'whoWeAre',
   title: 'Who We Are Section',
@@ -43,5 +45,10 @@ export default {
       type: 'image',
       options: { hotspot: true },
     },
+    {
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo'
+    }
   ],
 };
