@@ -91,8 +91,7 @@ export default function Footer() {
             >
               {/* SVG иконка адреса */}
               <svg
-                width="25"
-                height="24"
+              
                 viewBox="0 0 25 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -138,8 +137,7 @@ export default function Footer() {
             <a href={`tel:${data.phone}`}>
               {/* SVG иконка телефона */}
               <svg
-                width="25"
-                height="24"
+                
                 viewBox="0 0 25 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -158,8 +156,7 @@ export default function Footer() {
             <a href={`mailto:${data.email}`}>
               {/* SVG иконка почты */}
               <svg
-                width="24"
-                height="24"
+                
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
