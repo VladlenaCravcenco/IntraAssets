@@ -6,29 +6,30 @@ import sample2 from "../assets/sample2.png";
 import FadeInOnView from "../components/FadeInOnView";
 
 export default function WhoWeAre() {
-  const { t, lang, setLang } = useLanguage();
+  const { t } = useLanguage();
+
   return (
     <section className="who" id="about">
       <div className="who-container">
         <div className="title-line">
+          <div className="line" />
           <FadeInOnView>
-            <div className="line" />
             <h2>{t.whowetitle}</h2>
           </FadeInOnView>
         </div>
 
         <div className="who-grid">
-          <FadeInOnView>
-            <div className="who-img">
+          <div className="who-img">
+            <FadeInOnView>
               <img src={sample1} alt="Tower" />
-            </div>
-          </FadeInOnView>
+            </FadeInOnView>
+          </div>
 
           <div className="who-text">
             <FadeInOnView>
               <h3>{t.whowesubtitle}</h3>
             </FadeInOnView>
-            <FadeInOnView>
+            <FadeInOnView delay={0.2}>
               <p>{t.whowep1}</p>
               <p>{t.whowep2}</p>
               <p>{t.whowep3}</p>
@@ -55,7 +56,7 @@ export default function WhoWeAre() {
           </div>
 
           <div className="who-extra-img">
-            <FadeInOnView>
+            <FadeInOnView delay={0.4}>
               <img src={sample2} alt="People" />
             </FadeInOnView>
           </div>

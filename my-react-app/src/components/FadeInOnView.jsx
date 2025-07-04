@@ -1,7 +1,7 @@
-// src/components/FadeInOnView.js
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+// src/components/FadeInOnView.jsx
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const FadeInOnView = ({ children, delay = 0, x = 0, y = 30, duration = 0.8 }) => {
   const [ref, inView] = useInView({
