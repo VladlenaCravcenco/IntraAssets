@@ -34,7 +34,7 @@ export default {
     energytitle2: "Comerț De Energie Fără Bariere.",
     energydescr: "Intra Assets este partenerul tău de încredere în tranzacțiile de energie electrică din Europa de Est. Eficiență, stabilitate și conectare – cu o echipă agilă, pregătită să răspundă pieței moderne.",
     energylicense: "Descarcă licența PDF",
-    energyform: "Contact Our Team",
+    energyform: "Scrie-ne acum",
     energysubmit: "submit",
     license: "Licență ANRE nr. 2020-12-03",
     buttonlicense: "Descarcă licența PDF",

@@ -1,6 +1,6 @@
 export default {
   name: 'energySection',
-  title: 'Energy Section (Contact)',
+  title: 'Energy Section',
   type: 'document',
   fields: [
     {
@@ -8,8 +8,8 @@ export default {
       title: 'Title Line 1',
       type: 'object',
       fields: [
-        { name: 'en', title: 'English', type: 'string' },
-        { name: 'ro', title: 'Romanian', type: 'string' },
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ro', type: 'string', title: 'Romanian' },
       ],
     },
     {
@@ -17,8 +17,8 @@ export default {
       title: 'Title Line 2',
       type: 'object',
       fields: [
-        { name: 'en', title: 'English', type: 'string' },
-        { name: 'ro', title: 'Romanian', type: 'string' },
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ro', type: 'string', title: 'Romanian' },
       ],
     },
     {
@@ -26,8 +26,8 @@ export default {
       title: 'Description',
       type: 'object',
       fields: [
-        { name: 'en', title: 'English', type: 'text' },
-        { name: 'ro', title: 'Romanian', type: 'text' },
+        { name: 'en', type: 'text', title: 'English' },
+        { name: 'ro', type: 'text', title: 'Romanian' },
       ],
     },
     {
@@ -35,8 +35,8 @@ export default {
       title: 'Form Title',
       type: 'object',
       fields: [
-        { name: 'en', title: 'English', type: 'string' },
-        { name: 'ro', title: 'Romanian', type: 'string' },
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ro', type: 'string', title: 'Romanian' },
       ],
     },
     {
@@ -44,18 +44,80 @@ export default {
       title: 'Submit Button Text',
       type: 'object',
       fields: [
-        { name: 'en', title: 'English', type: 'string' },
-        { name: 'ro', title: 'Romanian', type: 'string' },
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ro', type: 'string', title: 'Romanian' },
       ],
     },
     {
       name: 'licenseText',
-      title: 'PDF Button Text',
+      title: 'License Button Text',
       type: 'object',
       fields: [
-        { name: 'en', title: 'English', type: 'string' },
-        { name: 'ro', title: 'Romanian', type: 'string' },
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ro', type: 'string', title: 'Romanian' },
       ],
+    },
+    {
+      name: 'linkedinUrl',
+      title: 'LinkedIn URL',
+      type: 'url',
+    },
+    {
+      name: 'formPlaceholders',
+      title: 'Form Placeholders',
+      type: 'object',
+      fields: [
+        {
+          name: 'name',
+          title: 'Name Field',
+          type: 'object',
+          fields: [
+            { name: 'en', type: 'string', title: 'English' },
+            { name: 'ro', type: 'string', title: 'Romanian' },
+          ],
+        },
+        {
+          name: 'email',
+          title: 'Email Field',
+          type: 'object',
+          fields: [
+            { name: 'en', type: 'string', title: 'English' },
+            { name: 'ro', type: 'string', title: 'Romanian' },
+          ],
+        },
+        {
+          name: 'phone',
+          title: 'Phone Field',
+          type: 'object',
+          fields: [
+            { name: 'en', type: 'string', title: 'English' },
+            { name: 'ro', type: 'string', title: 'Romanian' },
+          ],
+        },
+        {
+          name: 'message',
+          title: 'Message Field',
+          type: 'object',
+          fields: [
+            { name: 'en', type: 'string', title: 'English' },
+            { name: 'ro', type: 'string', title: 'Romanian' },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'backgroundImage',
+      title: 'Background Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'formRecipientEmail',
+      title: 'Recipient Email',
+      type: 'string',
+      description: 'Email address where form submissions should be sent',
     },
   ],
 };
