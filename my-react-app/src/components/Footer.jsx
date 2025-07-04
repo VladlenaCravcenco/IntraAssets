@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="footer-col">
           <h3>{data.contactTitle?.[lang]}</h3>
           <p>
-            <a href={data.mapUrl} target="_blank" rel="noopener noreferrer">
+            <a href={data.address?.mapUrl} target="_blank" rel="noopener noreferrer">
               {/* SVG иконка адреса */}
               <svg
                 width="25"
@@ -99,7 +99,7 @@ export default function Footer() {
                   stroke-linejoin="round"
                 />
               </svg>
-              {data.address}
+              {data.address?.text}
             </a>
           </p>
           <p>
