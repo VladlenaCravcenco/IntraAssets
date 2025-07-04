@@ -21,11 +21,12 @@ function Hero() {
           <p className="hero-description">{data.subtitle[lang]}</p>
           <a href='#contacts' className="yellow-btn">{data.cta1[lang]}</a>
           <a href='#contacts' className="yellow-btn">{data.cta2[lang]}</a>
-          <a href='#contacts' className="circle-btn">
-            <span className="arrow"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.939 0.848633H9.60288V2.01564H17.5327L1.01953 18.523L1.84227 19.3457L18.3554 2.83838V10.1847H19.5225V1.43214C19.5225 1.27738 19.461 1.12897 19.3516 1.01954C19.2421 0.910109 19.0937 0.848633 18.939 0.848633Z" fill="black"/>
-</svg>
-</span>
+          <a href="#contacts" className="circle-btn">
+            <span className="arrow">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.6577 0.5H13.1577V2.1875H24.6242L0.746094 26.0572L1.93578 27.2469L25.8139 3.37719V14H27.5014V1.34375C27.5014 1.11997 27.4125 0.905362 27.2543 0.747129C27.096 0.588895 26.8814 0.5 26.6577 0.5Z" fill="black"/>
+              </svg>
+            </span>
           </a>
         </div>
       </div>

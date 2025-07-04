@@ -34,7 +34,7 @@ export default function WhatWeDo() {
         </div>
         <div className="what-header">
           <p>{data.description?.[lang]}</p>
-          {/* ОСТАВИЛА твою кнопку */}
+         
           <a href="#contacts" className="circle-btn">
             <span className="arrow">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
