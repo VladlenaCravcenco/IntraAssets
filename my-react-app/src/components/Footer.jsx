@@ -8,8 +8,32 @@ export default function Footer() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    client.fetch(`*[_type == "footer"][0]`).then(setData).catch(console.error);
-  }, []);
+  client
+    .fetch(`*[_type == "footer"][0]{
+      logo {
+        asset->{url}
+      },
+      companyNameText,
+      licenseStatusText,
+      licenseText,
+      linkedinUrl,
+      teamTitle,
+      team[] {
+        name,
+        position,
+        email
+      },
+      contactTitle,
+      address {
+        text,
+        mapUrl
+      },
+      phone,
+      email
+    }`)
+    .then(setData)
+    .catch(console.error);
+}, []);
 
   if (!data) return null;
 
@@ -17,14 +41,12 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-col">
-          <h2>
-            <span className="yellow">
-              {data.logoText?.[lang]?.split(" ")[0]}
-            </span>{" "}
-            {data.logoText?.[lang]?.split(" ")[1]}
-          </h2>
-          <p>{data.companyName}</p>
-          <p>{data.licenseText?.[lang]}</p>
+                    {data.logo && (
+            <img src={data.logo} alt="Logo" className="footer-logo" />
+          )}
+          
+          <p>{data.companyNameText?.[lang]}</p>
+          <p>{data.licenseStatusText?.[lang]}</p>
           <p>
             <a
               href={data.linkedinUrl}
