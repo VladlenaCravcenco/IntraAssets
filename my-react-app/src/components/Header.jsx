@@ -11,14 +11,12 @@ function Header() {
 
   useEffect(() => {
     client
-      .fetch(`*[_type == "header"][0]{
-        logo { asset->{url} },
-        navItems,
-        ctaText,
-        ctaUrl
-      }`)
-      .then(setData)
-      .catch(console.error);
+  .fetch(`*[_type == "header"][0]{
+    logoImage { asset->{url} },
+    logoText,
+    navLinks
+  }`)
+  .then(setData);
   }, []);
 
   useEffect(() => {
