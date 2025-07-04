@@ -11,9 +11,9 @@ export default function Footer() {
     client
       .fetch(
         `*[_type == "footer"][0]{
-      logo {
-        asset->{url}
-      },
+      footerLogo {
+          asset->{url}
+        },
       companyNameText,
       licenseStatusText,
       licenseText,
