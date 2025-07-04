@@ -46,8 +46,8 @@ function Header() {
         </nav>
 
         <div className="language-switcher">
-          <button onClick={() => setLang('ro')}>ro</button> |
-          <button onClick={() => setLang('en')}> en</button>
+          <button onClick={() => setLang('ro')}>ro</button> | 
+          <button onClick={() => setLang('en')}>        en</button>
         </div>
 
         <button className="burger" onClick={() => setMenuOpen(!menuOpen)}>
