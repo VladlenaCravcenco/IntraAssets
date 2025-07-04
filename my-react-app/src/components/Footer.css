@@ -46,7 +46,7 @@ display: inline-flex;
   gap: 8px;
 text-decoration: none;
 }
-a svg {
+.footer-col a svg {
   width: 2.5em !important;
   height: auto !important;
 }
