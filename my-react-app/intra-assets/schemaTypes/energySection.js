@@ -106,12 +106,10 @@ export default {
       ],
     },
     {
-      name: 'backgroundImage',
-      title: 'Background Image',
+      name: 'image',
+      title: 'Image next to form',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
+      options: { hotspot: true },
     },
     {
       name: 'formRecipientEmail',

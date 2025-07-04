@@ -61,17 +61,7 @@ export default function EnergySection() {
   if (!data) return null;
 
   return (
-    <section
-      className="energy"
-      id="contacts"
-      style={{
-        backgroundImage: data.backgroundImage
-          ? `url(${data.backgroundImage.asset.url})`
-          : 'none',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <section className="energy" id="contacts">
       <div className="energy-container">
         <div className="energy-text">
           <h2>
@@ -127,7 +117,9 @@ export default function EnergySection() {
           </form>
 
           <div className="energy-image">
-            <img src={worker} alt="Worker" />
+            {data.image && (
+  <img src={data.image.asset.url} alt="Worker" />
+)}
           </div>
         </div>
       </div>
