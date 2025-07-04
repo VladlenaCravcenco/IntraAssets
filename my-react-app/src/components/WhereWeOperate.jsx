@@ -40,7 +40,10 @@ export default function WhereWeOperate() {
             <img src={sampleMap} alt="electric map" /> {/* локальное изображение */}
             <div className="circle-btn-wrapper">
               <a href="#contacts" className="circle-btn">
-                <span className="arrow">↗</span>
+                <span className="arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.939 0.848633H9.60288V2.01564H17.5327L1.01953 18.523L1.84227 19.3457L18.3554 2.83838V10.1847H19.5225V1.43214C19.5225 1.27738 19.461 1.12897 19.3516 1.01954C19.2421 0.910109 19.0937 0.848633 18.939 0.848633Z" fill="black"/>
+</svg>
+</span>
               </a>
             </div>
           </div>
@@ -55,7 +58,11 @@ export default function WhereWeOperate() {
               <h3>Country Market Activity</h3>
               {data.countries?.map((country, i) => (
                 <div className="entry" key={i}>
-                  <span>📍 {country.name?.[lang]}</span>
+                  <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0654 15.7705C12.5232 18.2283 16.508 18.2283 18.9658 15.7705C21.4236 13.3127 21.4236 9.32789 18.9658 6.87012C16.508 4.41234 12.5232 4.41234 10.0654 6.87012C7.60765 9.32789 7.60765 13.3127 10.0654 15.7705Z" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.5156 26.611V20.252" stroke="#FFCC00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ {country.name?.[lang]}</span>
                   <p>{country.description?.[lang]}</p>
                 </div>
               ))}
