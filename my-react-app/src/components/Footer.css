@@ -16,7 +16,9 @@
   align-items: start;
 }
 .footer-logo{
-  width: 150px;
+  width: 200px;
+  margin-bottom: 30px;
+
 }
 .footer-col{
     display: flex;
@@ -40,8 +42,13 @@
 
 }
 p a{
-  text-align: center;
-  
+display: inline-flex;
+  gap: 8px;
+text-decoration: none;
+}
+a svg {
+  width: 2.5em !important;
+  height: auto !important;
 }
 
 .footer-line {
