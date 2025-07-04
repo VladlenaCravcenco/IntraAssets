@@ -3,6 +3,7 @@ import './Hero.css';
 import { useLanguage } from '../context/LanguageContext';
 import { client } from '../sanityClient';
 
+
 function Hero() {
   const { lang } = useLanguage();
   const [data, setData] = useState(null);
