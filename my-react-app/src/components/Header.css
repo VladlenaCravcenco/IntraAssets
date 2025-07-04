@@ -92,20 +92,20 @@ position: relative;
   font-weight: 400;
 }
 
+.language-switcher {
+  display: flex;
+  gap: 8px;
+}
+
 .language-switcher button {
   background: none;
   border: none;
   cursor: pointer;
-  font-weight: 700;
-  color: inherit;
-  opacity: 0.5;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-.language-switcher .active {
-  font-weight: 700;
-  opacity: 1;
-  color: #FFD600;
+.language-switcher .active-lang {
+  font-weight: bold;
 }
 
 /* Responsive */
