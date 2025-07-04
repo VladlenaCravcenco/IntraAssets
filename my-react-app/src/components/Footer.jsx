@@ -8,8 +8,9 @@ export default function Footer() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-  client
-    .fetch(`*[_type == "footer"][0]{
+    client
+      .fetch(
+        `*[_type == "footer"][0]{
       logo {
         asset->{url}
       },
@@ -30,10 +31,11 @@ export default function Footer() {
       },
       phone,
       email
-    }`)
-    .then(setData)
-    .catch(console.error);
-}, []);
+    }`
+      )
+      .then(setData)
+      .catch(console.error);
+  }, []);
 
   if (!data) return null;
 
@@ -41,10 +43,14 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-col">
-                    {data.logo && (
-            <img src={data.logo} alt="Logo" className="footer-logo" />
+          {data.footerLogo?.asset?.url && (
+            <img
+              src={data.footerLogo.asset.url}
+              alt="Footer Logo"
+              className="footer-logo"
+            />
           )}
-          
+
           <p>{data.companyNameText?.[lang]}</p>
           <p>{data.licenseStatusText?.[lang]}</p>
           <p>
@@ -78,7 +84,11 @@ export default function Footer() {
         <div className="footer-col">
           <h3>{data.contactTitle?.[lang]}</h3>
           <p>
-            <a href={data.address?.mapUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={data.address?.mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {/* SVG иконка адреса */}
               <svg
                 width="25"

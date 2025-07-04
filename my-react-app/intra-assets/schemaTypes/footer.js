@@ -4,8 +4,8 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'logo',
-            title: 'Logo Image',
+            name: 'footerLogo',
+            title: 'Footer Logo',
             type: 'image',
             options: {
                 hotspot: true
@@ -50,6 +50,14 @@ export default {
             name: 'linkedinUrl',
             title: 'LinkedIn URL',
             type: 'url'
+        }, {
+            name: 'teamTitle',
+            title: 'Team Title',
+            type: 'object',
+            fields: [
+                { name: 'en', type: 'string', title: 'English' },
+                { name: 'ro', type: 'string', title: 'Romanian' }
+            ]
         },
         {
             name: 'team',
@@ -64,6 +72,14 @@ export default {
                         { name: 'email', type: 'string', title: 'Email' }
                     ]
                 }
+            ]
+        }, {
+            name: 'contactTitle',
+            title: 'Contact Title',
+            type: 'object',
+            fields: [
+                { name: 'en', type: 'string', title: 'English' },
+                { name: 'ro', type: 'string', title: 'Romanian' }
             ]
         },
         {
@@ -87,3 +103,6 @@ export default {
         }
     ]
 };
+
+
+
