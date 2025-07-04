@@ -25,15 +25,10 @@
   justify-content: space-between;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: white;
+.logo img{
+  width: 150px;
 }
 
-.logo span {
-  color: #FFD600;
-}
 
 .nav {
   display: flex;
