@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AdminStudio from './admin/Studio';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -13,7 +15,8 @@ import Team from './components/Team';
 
 function App() {
   return (
-    <>
+    <Routes>
+      <Route path="/admin" element={<AdminStudio />} />
       <Header />
       <Hero />
       <WhoWeAre />
@@ -24,7 +27,7 @@ function App() {
       <FooterMap />
       <Footer />
       <CopyFooter />
-    </>
+    </Routes>
   );
 }
 
