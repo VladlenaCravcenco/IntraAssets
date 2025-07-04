@@ -34,12 +34,8 @@ export default function Footer() {
               LinkedIn
             </a>{" "}
             |
-            <a
-              href={data.licenseFile?.asset?.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {data.licenseButtonText?.[lang]}
+            <a href="/files/Reperfectatã la data de - 25.02.2025.pdf" download>
+              {data.licenseText?.[lang]}
             </a>
           </p>
           <div className="footer-line" />
