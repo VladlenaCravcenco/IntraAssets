@@ -11,12 +11,12 @@ function Header() {
 
   useEffect(() => {
     client
-  .fetch(`*[_type == "header"][0]{
-    logoImage { asset->{url} },
-    logoText,
-    navLinks
-  }`)
-  .then(setData);
+      .fetch(`*[_type == "header"][0]{
+        logoImage { asset->{url} },
+        navLinks
+      }`)
+      .then(setData)
+      .catch(console.error);
   }, []);
 
   useEffect(() => {
@@ -31,20 +31,18 @@ function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="logo">
-          {data.logo ? (
-            <img src={data.logo.asset.url} alt="Logo" />
+          {data.logoImage ? (
+            <img src={data.logoImage.asset.url} alt="Logo" />
           ) : (
             <>Intra <span>Assets</span></>
           )}
         </div>
 
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-          {data.navItems?.map((item, i) => (
-            <a key={i} href={item.url}>{item.label}</a>
-          ))}
-          {data.ctaText && (
-            <a className="cta" href={data.ctaUrl}>{data.ctaText}</a>
-          )}
+          <a href="#about">{data.navLinks?.about?.[lang]}</a>
+          <a href="#activity">{data.navLinks?.activity?.[lang]}</a>
+          <a href="#services">{data.navLinks?.services?.[lang]}</a>
+          <a href="#contacts">{data.navLinks?.contacts?.[lang]}</a>
         </nav>
 
         <div className="language-switcher">
@@ -53,27 +51,17 @@ function Header() {
         </div>
 
         <button className="burger" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? (
-            <span className="close-icon">✕</span>
-          ) : (
-            <span className="burger-icon">☰</span>
-          )}
+          {menuOpen ? <span className="close-icon">✕</span> : <span className="burger-icon">☰</span>}
         </button>
       </div>
 
       {menuOpen && (
         <div className="mobile-menu">
           <div className="mobile-nav">
-            {data.navItems?.map((item, i) => (
-              <a key={i} href={item.url} onClick={() => setMenuOpen(false)}>
-                {item.label}
-              </a>
-            ))}
-            {data.ctaText && (
-              <a className="cta" href={data.ctaUrl} onClick={() => setMenuOpen(false)}>
-                {data.ctaText}
-              </a>
-            )}
+            <a href="#about" onClick={() => setMenuOpen(false)}>{data.navLinks?.about?.[lang]}</a>
+            <a href="#activity" onClick={() => setMenuOpen(false)}>{data.navLinks?.activity?.[lang]}</a>
+            <a href="#services" onClick={() => setMenuOpen(false)}>{data.navLinks?.services?.[lang]}</a>
+            <a href="#contacts" onClick={() => setMenuOpen(false)}>{data.navLinks?.contacts?.[lang]}</a>
           </div>
         </div>
       )}

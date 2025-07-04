@@ -4,21 +4,12 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'logoText',
-      title: 'Logo Text',
-      type: 'object',
-      fields: [
-        { name: 'en', type: 'string', title: 'English' },
-        { name: 'ro', type: 'string', title: 'Romanian' }
-      ]
-    },
-    {
       name: 'logoImage',
-      title: 'Logo Image (optional)',
+      title: 'Logo Image',
       type: 'image',
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
       name: 'navLinks',
@@ -30,38 +21,38 @@ export default {
           title: 'About',
           type: 'object',
           fields: [
-            { name: 'en', type: 'string', title: 'English' },
-            { name: 'ro', type: 'string', title: 'Romanian' }
-          ]
+            { name: 'en', title: 'English', type: 'string' },
+            { name: 'ro', title: 'Romanian', type: 'string' },
+          ],
         },
         {
           name: 'activity',
           title: 'Activity',
           type: 'object',
           fields: [
-            { name: 'en', type: 'string', title: 'English' },
-            { name: 'ro', type: 'string', title: 'Romanian' }
-          ]
+            { name: 'en', title: 'English', type: 'string' },
+            { name: 'ro', title: 'Romanian', type: 'string' },
+          ],
         },
         {
           name: 'services',
           title: 'Services',
           type: 'object',
           fields: [
-            { name: 'en', type: 'string', title: 'English' },
-            { name: 'ro', type: 'string', title: 'Romanian' }
-          ]
+            { name: 'en', title: 'English', type: 'string' },
+            { name: 'ro', title: 'Romanian', type: 'string' },
+          ],
         },
         {
           name: 'contacts',
           title: 'Contacts',
           type: 'object',
           fields: [
-            { name: 'en', type: 'string', title: 'English' },
-            { name: 'ro', type: 'string', title: 'Romanian' }
-          ]
-        }
-      ]
-    }
-  ]
+            { name: 'en', title: 'English', type: 'string' },
+            { name: 'ro', title: 'Romanian', type: 'string' },
+          ],
+        },
+      ],
+    },
+  ],
 };
