@@ -58,16 +58,18 @@ export default function WhatWeDo() {
           </a>
         </motion.div>
 
-        <div className="cards">
+        <motion.div
+          className="cards"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           {data.services?.map((card, i) => (
-            <motion.div
+            <div
               className={`card ${activeCard === i ? 'active' : ''}`}
               key={i}
               onMouseEnter={() => setActiveCard(i)}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              viewport={{ once: true }}
             >
               <span className="card-number">{card.id}</span>
               <p className="card-text">{card.text?.[lang]}</p>
@@ -75,9 +77,9 @@ export default function WhatWeDo() {
                 className="card-image"
                 style={{ backgroundImage: `url(${card.image?.asset?.url})` }}
               />
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
