@@ -19,22 +19,20 @@ export default function WhoWeAre() {
         </div>
 
         <div className="who-grid">
-          <div className="who-img">
-            <FadeInOnView>
+          <FadeInOnView direction="left">
+            <div className="who-img">
               <img src={sample1} alt="Tower" />
-            </FadeInOnView>
-          </div>
+            </div>
+          </FadeInOnView>
 
-          <div className="who-text">
-            <FadeInOnView>
+          <FadeInOnView>
+            <div className="who-text">
               <h3>{t.whowesubtitle}</h3>
-            </FadeInOnView>
-            <FadeInOnView delay={0.2}>
               <p>{t.whowep1}</p>
               <p>{t.whowep2}</p>
               <p>{t.whowep3}</p>
-            </FadeInOnView>
-          </div>
+            </div>
+          </FadeInOnView>
 
           <div className="who-arrow">
             <a href="#contacts" className="circle-btn">
@@ -55,11 +53,11 @@ export default function WhoWeAre() {
             </a>
           </div>
 
-          <div className="who-extra-img">
-            <FadeInOnView delay={0.4}>
+          <FadeInOnView direction="up" delay={0.2}>
+            <div className="who-extra-img">
               <img src={sample2} alt="People" />
-            </FadeInOnView>
-          </div>
+            </div>
+          </FadeInOnView>
         </div>
       </div>
     </section>
