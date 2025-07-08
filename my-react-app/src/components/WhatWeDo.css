@@ -70,18 +70,26 @@
   z-index: 1;
 }
 
+.card.active {
+  background: #000;
+}
 .card-number {
   font-weight: bold;
   font-size: 60px;
   color: black;
   transition: color 0.3s ease;
 }
-
+.card.active .card-number {
+  color: #FFD600;
+}
 .card-text {
   margin-top: 10px;
   font-size: 22px;
   color: black;
   transition: color 0.3s ease;
+}
+.card.active .card-text {
+  color: white;
 }
 
 .card-image {
@@ -94,6 +102,10 @@
   transition: left 0.3s ease;
   z-index: 0!important;
   border-radius: 14px;
+}
+
+.card.active .card-image {
+  left: 0;
 }
 
 .card:hover .card-image {

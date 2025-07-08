@@ -6,6 +6,7 @@ import { client } from '../sanityClient';
 export default function WhatWeDo() {
   const { lang } = useLanguage();
   const [data, setData] = useState(null);
+  const [activeCard, setActiveCard] = useState(0); // по умолчанию первая активна
 
   useEffect(() => {
     client
@@ -34,7 +35,6 @@ export default function WhatWeDo() {
         </div>
         <div className="what-header">
           <p>{data.description?.[lang]}</p>
-         
           <a href="#contacts" className="circle-btn">
             <span className="arrow">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,11 @@ export default function WhatWeDo() {
 
         <div className="cards">
           {data.services?.map((card, i) => (
-            <div className="card" key={i}>
+            <div
+              className={`card ${activeCard === i ? 'active' : ''}`}
+              key={i}
+              onMouseEnter={() => setActiveCard(i)}
+            >
               <span className="card-number">{card.id}</span>
               <p className="card-text">{card.text?.[lang]}</p>
               <div
