@@ -1,54 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import './WhatWeDo.css';
+import './Hero.css';
 import { useLanguage } from '../context/LanguageContext';
 import { client } from '../sanityClient';
-import { motion } from 'framer-motion';
 
-export default function WhatWeDo() {
+
+function Hero() {
   const { lang } = useLanguage();
   const [data, setData] = useState(null);
-  const [activeCard, setActiveCard] = useState(0);
 
   useEffect(() => {
-    client
-      .fetch(`*[_type == "whatWeDo"][0]{
-        title,
-        description,
-        services[]{
-          id,
-          text,
-          image {
-            asset->{ url }
-          }
-        }
-      }`)
-      .then(setData);
+    client.fetch(`*[_type == "hero"][0]`).then(setData);
   }, []);
 
   if (!data) return null;
 
   return (
-    <section className="what" id="services">
-      <div className="what-container">
-        <motion.div
-          className="title-line"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="line" />
-          <h2>{data.title?.[lang]}</h2>
-        </motion.div>
-
-        <motion.div
-          className="what-header"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <p>{data.description?.[lang]}</p>
+    <section className="hero">
+      <div className="hero-container">
+        <h1 className="hero-title">{data.title[lang]}</h1>
+        <div className='hero-descr-container'>
+          <p className="hero-description">{data.subtitle[lang]}</p>
+          <a href='#contacts' className="yellow-btn">{data.cta1[lang]}</a>
+          <a href='#contacts' className="yellow-btn">{data.cta2[lang]}</a>
           <a href="#contacts" className="circle-btn">
             <span className="arrow">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,29 +29,10 @@ export default function WhatWeDo() {
               </svg>
             </span>
           </a>
-        </motion.div>
-
-        <div className="cards">
-          {data.services?.map((card, i) => (
-            <motion.div
-              className={`card ${activeCard === i ? 'active' : ''}`}
-              key={i}
-              onMouseEnter={() => setActiveCard(i)}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <span className="card-number">{card.id}</span>
-              <p className="card-text">{card.text?.[lang]}</p>
-              <div
-                className="card-image"
-                style={{ backgroundImage: `url(${card.image?.asset?.url})` }}
-              />
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
   );
 }
+
+export default Hero;
