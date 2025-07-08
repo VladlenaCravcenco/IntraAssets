@@ -56,7 +56,7 @@ export default function WhoWeAre() {
           </div>
 
           <div className="who-extra-img">
-            <FadeInOnView delay={0.4}>
+            <FadeInOnView delay={0.2}>
               <img src={sample2} alt="People" />
             </FadeInOnView>
           </div>
