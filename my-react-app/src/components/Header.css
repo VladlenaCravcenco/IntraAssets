@@ -25,10 +25,9 @@
   justify-content: space-between;
 }
 
-.logo img{
-  width: 150px;
+.logo img {
+  width: 90px;
 }
-
 
 .nav {
   display: flex;
@@ -58,11 +57,11 @@
 .close-icon {
   color: black;
   font-size: 24px;
-  background: #FFD600;
+  background: #ffd600;
   border-radius: 4px;
   padding: 4px 10px;
   z-index: 1000;
-position: relative;
+  position: relative;
 }
 
 .mobile-menu {
@@ -110,8 +109,10 @@ position: relative;
 
 /* Responsive */
 @media (max-width: 1024px) {
-
-  .header{
+  .logo img {
+    width: 70px;
+  }
+  .header {
     height: 80px;
   }
   .nav {
