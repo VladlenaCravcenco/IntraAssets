@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './WhatWeDo.css';
 import { useLanguage } from '../context/LanguageContext';
 import { client } from '../sanityClient';
+import { motion } from 'framer-motion';
 
 export default function WhatWeDo() {
   const { lang } = useLanguage();
   const [data, setData] = useState(null);
-  const [activeCard, setActiveCard] = useState(0); // по умолчанию первая активна
+  const [activeCard, setActiveCard] = useState(0);
 
   useEffect(() => {
     client
@@ -29,11 +30,24 @@ export default function WhatWeDo() {
   return (
     <section className="what" id="services">
       <div className="what-container">
-        <div className="title-line">
+        <motion.div
+          className="title-line"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <div className="line" />
           <h2>{data.title?.[lang]}</h2>
-        </div>
-        <div className="what-header">
+        </motion.div>
+
+        <motion.div
+          className="what-header"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <p>{data.description?.[lang]}</p>
           <a href="#contacts" className="circle-btn">
             <span className="arrow">
@@ -42,14 +56,18 @@ export default function WhatWeDo() {
               </svg>
             </span>
           </a>
-        </div>
+        </motion.div>
 
         <div className="cards">
           {data.services?.map((card, i) => (
-            <div
+            <motion.div
               className={`card ${activeCard === i ? 'active' : ''}`}
               key={i}
               onMouseEnter={() => setActiveCard(i)}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.15, duration: 0.5 }}
+              viewport={{ once: true }}
             >
               <span className="card-number">{card.id}</span>
               <p className="card-text">{card.text?.[lang]}</p>
@@ -57,7 +75,7 @@ export default function WhatWeDo() {
                 className="card-image"
                 style={{ backgroundImage: `url(${card.image?.asset?.url})` }}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

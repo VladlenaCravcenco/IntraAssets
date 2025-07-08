@@ -16,7 +16,8 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
+  margin-top: 150px;
 }
 
 .hero-title {
