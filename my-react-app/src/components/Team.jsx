@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Team.css';
 import { useLanguage } from '../context/LanguageContext';
 import { client } from '../sanityClient';
+import { motion } from 'framer-motion';
 
 function Team() {
   const { lang } = useLanguage();
@@ -16,21 +17,41 @@ function Team() {
   return (
     <section className="team-section">
       <div className="team-container">
-        <div className="title-line">
+        <motion.div
+          className="title-line"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <div className="line" />
           <h2>{data.title[lang]}</h2>
-        </div>
-        <div className="team-grid">
+        </motion.div>
+
+        <motion.div
+          className="team-grid"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           {data.members?.map((member, index) => (
-            <div className="team-card" key={index}>
+            <motion.div
+              className="team-card"
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.4 }}
+              viewport={{ once: true }}
+            >
               <p className="team-name">{member.name}</p>
               <p className="team-role">{member.role[lang]}</p>
               <a className="team-email" href={`mailto:${member.email}`}>
                 {member.email}
               </a>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
