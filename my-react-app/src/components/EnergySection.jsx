@@ -61,8 +61,8 @@ export default function EnergySection() {
 
     emailjs
       .send(
-        'service_e2wwqcr',
-        'template_4l0bbqn',
+        'service_5npwxmo',
+        'template_smbuemm',
         {
           to_email: data.formRecipientEmail,
           from_name: form.name,
@@ -70,7 +70,7 @@ export default function EnergySection() {
           phone: form.phone,
           message: form.message,
         },
-        'flm356T35V3ZqIHBS'
+        'OZJZEqSEV3gvc2eM5'
       )
       .then(() => {
         alert('Message sent!');
