@@ -1,3 +1,5 @@
+import seo from './seo';
+
 export default {
   name: 'energySection',
   title: 'Energy Section',
@@ -116,6 +118,12 @@ export default {
       title: 'Recipient Email',
       type: 'string',
       description: 'Email address where form submissions should be sent',
+    },
+
+    {
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo'
     },
   ],
 };

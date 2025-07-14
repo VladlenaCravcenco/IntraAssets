@@ -1,3 +1,5 @@
+import seo from './seo';
+
 export default {
   name: 'whatWeDo',
   title: 'What We Do Section',
@@ -48,6 +50,11 @@ export default {
           ],
         },
       ],
+    },
+    {
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo'
     },
   ],
 };

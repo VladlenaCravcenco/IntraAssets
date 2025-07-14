@@ -1,3 +1,5 @@
+import seo from './seo';
+
 export default {
   name: 'whereWeOperate',
   title: 'Where We Operate Section',
@@ -69,6 +71,11 @@ export default {
         { name: 'en', type: 'string', title: 'English' },
         { name: 'ro', type: 'string', title: 'Romanian' },
       ],
+    },
+    {
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo'
     },
   ],
 };
