@@ -1,0 +1,20 @@
+# Dependencies
+/node_modules
+
+# Sanity build & runtime
+/dist
+/.sanity
+/out
+
+# Logs
+logs
+*.log
+
+# Local files
+.env
+*.local
+
+# IDE & system
+.vscode/
+.idea
+.DS_Store
