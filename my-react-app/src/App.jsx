@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import WhoWeAre from "./components/WhoWeAre";
@@ -24,6 +25,7 @@ function App() {
       <FooterMap />
       <Footer />
       <CopyFooter />
+      <Analytics />
     </>
   );
 }
